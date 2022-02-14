@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+<Environment>
+    <railLength> 5 </railLength>
+    <latitude> 32.990254   </latitude>
+    <longitude> -106.974998 </longitude>
+    <elevation> 1400 </elevation>
+    <date>	2018, 10, 15, 12    </date>
+    <datum>  WGS84  </datum>
+</Environment>
+
+<AtmosphericModel>
+    <type>  	Reanalysis    </type>
+    <file> ../data/weather/SpaceportAmerica_2018_ERA-5.nc </file>
+    <dictionary>  	ECMWF    </dictionary>
+</AtmosphericModel>
+
+<SolidMotor>
+    <thrustSource> ../data/motors/Cesaroni_M1670.eng </thrustSource>
+    <burnOut> 3.9   </burnOut>
+    <grainNumber> 5 </grainNumber>
+    <grainSeparation> 0.005 </grainSeparation>
+    <grainDensity>	1815    </grainDensity>
+    <grainOuterRadius>  0.033  </grainOuterRadius>
+    <grainInitialInnerRadius>  0.015  </grainInitialInnerRadius>
+    <grainInitialHeight>  0.12  </grainInitialHeight>
+    <nozzleRadius>  0.033  </nozzleRadius>
+    <throatRadius>  0.011  </throatRadius>
+    <interpolationMethod>  linear  </interpolationMethod>
+</SolidMotor>
+
+<Rocket>
+    <radius> 0.0635</radius>
+    <mass> 16.241   </mass>
+    <inertiaI> 6.60 </inertiaI>
+    <inertiaZ> 0.0351 </inertiaZ>
+    <distanceRocketNozzle>	-1.255    </distanceRocketNozzle>
+    <distanceRocketPropellant>  -0.85704  </distanceRocketPropellant>
+    <powerOffDrag> ../data/calisto/powerOffDragCurve.csv </powerOffDrag>
+    <powerOnDrag>  ../data/calisto/powerOnDragCurve.csv  </powerOnDrag>
+
+	<railButtons> 0.2, -0.5 </railButtons>
+	
+	<addNose>
+		<length> 0.55829 </length>
+    	<kind> vonKarman </kind>
+    	<distanceToCM> 0.71971 </distanceToCM>
+    </addNose>
+
+    <addFins>
+    	<n> 4 </n>
+    	<span> 0.1 </span>
+    	<rootChord> 0.12 </rootChord>
+    	<tipChord> 0.04 </tipChord>
+    	<distanceToCM> -1.04956 </distanceToCM>
+    </addFins>
+
+    <addTail>
+    	<topRadius> 0.0635 </topRadius>
+    	<bottomRadius> 0.0435 </bottomRadius>
+    	<length> 0.06 </length>
+    	<distanceToCM> -1.194656 </distanceToCM>
+    </addTail>
+
+    <addParachuteMain>
+    	<CdS> 0.0435 </CdS>
+    	<samplingRate> 105 </samplingRate>
+    	<lag> 1.5 </lag>
+    	<noise> 0, 8.3, 0.5 </noise>
+    </addParachuteMain>
+
+    <addParachuteDrogue>
+    	<CdS> 1.0 </CdS>
+    	<samplingRate> 105 </samplingRate>
+    	<lag> 1.5 </lag>
+    	<noise> 0, 8.3, 0.5 </noise>
+    </addParachuteDrogue>
+
+</Rocket>
+
+<Fligt>
+	<inclination> 85 </inclination>
+	<heading> 0 </heading>
+</Fligt>
+
+
+</metadata>
